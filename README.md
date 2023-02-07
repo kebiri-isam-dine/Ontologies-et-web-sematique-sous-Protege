@@ -39,7 +39,15 @@ Ontologie, web sématique Protégé, OWL, RDF, XML
 
 ## Initiation
 Exemple d'ontologie pour une introduction : [Exemple_Pizza](Exemple_Pizza/Pizza.owl)       
-Cour référence pour la prise en main de `Protégé` : <Introduction à Protégé.pdf>       
+Cour référence pour la prise en main de `Protégé` : [Introduction à Protégé.pdf](Exemple_Pizza/Introduction%20à%20Protégé.pdf)     
+
+### Première initiation : Ontologie CLUEDO
+Fiche TP [Initiation](Initiation/Initiation.pdf)           
+Ontologie OWL sous Protégé : [Maisons.owl](Initiation/Maisons.owl)           
+
+
+
+
 
 
 

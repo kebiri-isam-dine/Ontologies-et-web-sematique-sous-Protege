@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/etudiant/ontologies/2023/0/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/etudiant/ontologies/2023/0/untitled-ontology-5">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#PieceNormale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonneVivante"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#surface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Piece"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PERSONNE1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PERSONNE2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PieceDuCrime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PERSONNE3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonneMorte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pieceContientPersonne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Maison"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MAISON1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#maisonContientPiece"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PIECE3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PIECE2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#personneDansPiece"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaisonCluedo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PIECE1"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#MaisonCluedo"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Maison"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#maisonContientPiece"/>
+                <Class IRI="#PieceDuCrime"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Piece"/>
+        <ObjectUnionOf>
+            <Class IRI="#PieceDuCrime"/>
+            <Class IRI="#PieceNormale"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PieceDuCrime"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Piece"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#pieceContientPersonne"/>
+                <Class IRI="#PersonneMorte"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Maison"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#maisonContientPiece"/>
+            <Class IRI="#Piece"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonneMorte"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonneVivante"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Piece"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#pieceContientPersonne"/>
+            <Class IRI="#Personne"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Piece"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#surface"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PieceNormale"/>
+        <Class IRI="#Piece"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#PersonneMorte"/>
+        <Class IRI="#PersonneVivante"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PieceDuCrime"/>
+        <Class IRI="#PieceNormale"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#MaisonCluedo"/>
+        <NamedIndividual IRI="#MAISON1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PersonneMorte"/>
+        <NamedIndividual IRI="#PERSONNE1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PersonneVivante"/>
+        <NamedIndividual IRI="#PERSONNE2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PersonneVivante"/>
+        <NamedIndividual IRI="#PERSONNE3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PieceDuCrime"/>
+        <NamedIndividual IRI="#PIECE1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Piece"/>
+        <NamedIndividual IRI="#PIECE2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Piece"/>
+        <NamedIndividual IRI="#PIECE3"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#PERSONNE1"/>
+        <NamedIndividual IRI="#PERSONNE2"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#PERSONNE1"/>
+        <NamedIndividual IRI="#PERSONNE3"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#PERSONNE2"/>
+        <NamedIndividual IRI="#PERSONNE3"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#PIECE1"/>
+        <NamedIndividual IRI="#PIECE2"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#PIECE1"/>
+        <NamedIndividual IRI="#PIECE3"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#PIECE2"/>
+        <NamedIndividual IRI="#PIECE3"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#personneDansPiece"/>
+        <NamedIndividual IRI="#PERSONNE1"/>
+        <NamedIndividual IRI="#PIECE1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#personneDansPiece"/>
+        <NamedIndividual IRI="#PERSONNE2"/>
+        <NamedIndividual IRI="#PIECE2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#personneDansPiece"/>
+        <NamedIndividual IRI="#PERSONNE3"/>
+        <NamedIndividual IRI="#PIECE2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+        <NamedIndividual IRI="#PIECE1"/>
+        <NamedIndividual IRI="#MAISON1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+        <NamedIndividual IRI="#PIECE2"/>
+        <NamedIndividual IRI="#MAISON1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+        <NamedIndividual IRI="#PIECE3"/>
+        <NamedIndividual IRI="#MAISON1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#surface"/>
+        <NamedIndividual IRI="#PIECE1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#surface"/>
+        <NamedIndividual IRI="#PIECE2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#surface"/>
+        <NamedIndividual IRI="#PIECE3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#maisonContientPiece"/>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#personneDansPiece"/>
+        <ObjectProperty IRI="#pieceContientPersonne"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#maisonContientPiece"/>
+        <Class IRI="#Maison"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#personneDansPiece"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pieceContientPersonne"/>
+        <Class IRI="#Piece"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+        <Class IRI="#Piece"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#maisonContientPiece"/>
+        <Class IRI="#Piece"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#personneDansPiece"/>
+        <Class IRI="#Piece"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pieceContientPersonne"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pieceDansMaison"/>
+        <Class IRI="#Maison"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#surface"/>
+    </FunctionalDataProperty>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
