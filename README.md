@@ -16,12 +16,13 @@
 
 
 ## About The Project
-Representation d'une ontologie "Monuments historique" en OWL sous le logiciel Protégé, qui doit respecter les contreintes suivantes : 
+Représentation d'une ontologie "Monuments historiques" en OWL sous le logiciel Protégé, qui doit respecter les contraintes suivantes :
+
 - contenir au moins 20 nouvelles classes
-- au moins 10 des classes C doit être associée à au moins un axiome complexe du type ‘C SubClassOf [expression complexe]’ ou ’C EquivalentTo [expression complexe]’
-- contenir les object properties nécessaires
+- au moins 10 des classes C doit être associées à au moins un axiome complexe du type ‘C SubClassOf [expression complexe]’ ou ’C EquivalentTo [expression complexe]’
+- contenir les objectées properties nécessaires
 - contenir (en annotation property) des définitions aristotéliciennes des classes et object properties introduites
-- avoir été prouvé cohérente par un raisonneur
+- avoir été prouvé cohérente par un raisonneur       
 Optionnel :
 - créer des datatype properties si besoin.
 - créer des individus si besoin, déclarer chaque individu instance d’au moins une classe (autre que Thing).
@@ -37,8 +38,8 @@ Ontologie, web sématique Protégé, OWL, RDF, XML
 
 
 ## Initiation
-Exemple d'ontologie pour une introduction : [Exemple_Pizza](Exemple_Pizza/Pizza.owl)
-Cour référence pour la prise en main de `Protégé` : <Introduction à Protégé.pdf>
+Exemple d'ontologie pour une introduction : [Exemple_Pizza](Exemple_Pizza/Pizza.owl)       
+Cour référence pour la prise en main de `Protégé` : <Introduction à Protégé.pdf>       
 
 
 
